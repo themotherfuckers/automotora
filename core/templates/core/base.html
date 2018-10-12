@@ -30,6 +30,15 @@
            <li>
                <a href="#">Historia</a>
            </li>
+           <li>{% if request.user.is_authenticated %}</li>
+           <li>
+               <a href="">cerrar sesion</a>
+           </li>
+           {% endif %}
+           <li>
+                <a href="{% url 'logout' %}">cerrar sesion </a>
+
+           </li>
        </ul>
     </header>
     <div class="landing">
